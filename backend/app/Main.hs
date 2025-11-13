@@ -78,8 +78,8 @@ main = do
   portStr <- lookupEnv "PORT"
   let port = maybe 8080 id (portStr >>= readMaybe)
 
-  putStrLn $ "🚀 Servidor iniciado na porta " ++ show port
-  putStrLn "📊 Endpoint: POST /api/compound"
+  putStrLn $ "[INFO] Servidor iniciado na porta " ++ show port
+  putStrLn "[INFO] Endpoint: POST /api/compound"
 
   scotty port $ do
     -- Middleware CORS
@@ -97,13 +97,13 @@ main = do
     -- Rota principal para calcular juros compostos
     post "/api/compound" $ do
       req <- jsonData :: ActionM CompoundRequest
-      liftIO $ putStrLn $ "📥 Requisição recebida: " ++ show req
+      liftIO $ putStrLn $ "[REQUEST] Requisicao recebida: " ++ show req
 
       case calculateCompound req of
         Right response -> do
           status status200
           json response
-          liftIO $ putStrLn $ "✅ Resposta enviada: " ++ show response
+          liftIO $ putStrLn $ "[SUCCESS] Resposta enviada: " ++ show response
 
         Left errMsg -> do
           status status400
@@ -111,7 +111,7 @@ main = do
             { Main.error = "ValidationError"
             , Main.message = errMsg
             }
-          liftIO $ putStrLn $ "❌ Erro de validação: " ++ errMsg
+          liftIO $ putStrLn $ "[ERROR] Erro de validacao: " ++ errMsg
 
     -- Tratamento de erros gerais
     defaultHandler $ \str -> do
