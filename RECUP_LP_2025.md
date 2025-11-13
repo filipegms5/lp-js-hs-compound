@@ -16,13 +16,12 @@
 ## Links de Produção
 
 ### Frontend (Aplicação)
-URL: [URL DO FRONTEND DEPLOYADO]
-
+URL: https://lp-recuperacao-frontend-a4037idn5-filipes-projects-3f0cdcde.vercel.app/
 ### Backend (API)
-URL: [URL DO BACKEND DEPLOYADO]
+URL: https://lp-js-hs-compound.onrender.com/
 
 ### Repositório GitHub
-URL: [URL DO REPOSITÓRIO]
+URL: https://github.com/filipegms5/lp-js-hs-compound
 
 ---
 
