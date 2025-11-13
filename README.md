@@ -222,8 +222,6 @@ curl -X POST http://localhost:8080/api/compound \
 
 ## Deploy em Produção
 
-Consulte o arquivo **[DEPLOY.md](DEPLOY.md)** para instruções detalhadas passo a passo.
-
 ### Resumo Rápido
 
 #### Backend (Render)
