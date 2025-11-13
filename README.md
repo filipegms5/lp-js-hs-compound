@@ -237,9 +237,9 @@ curl -X POST http://localhost:8080/api/compound \
 #### Frontend (Vercel)
 
 1. Instalar Vercel CLI: `npm i -g vercel`
-2. Executar: `cd frontend && vercel`
-3. Seguir prompts
-4. Atualizar `app.js` com URL do backend
+2. Atualizar `app.js` com URL do backend
+3. Executar: `cd frontend && vercel`
+4. Seguir prompts
 
 ### Configurar CORS
 
@@ -307,7 +307,6 @@ lp-recuperacao-js-hs-compound/
  .gitignore              # Arquivos ignorados
  LICENSE                 # Licença MIT
  README.md               # Esta documentação
- DEPLOY.md               # Guia de deploy
  RECUP_LP_2025.md        # Identificação da atividade
 ```
 
@@ -316,13 +315,13 @@ lp-recuperacao-js-hs-compound/
 > **Nota:** Preencha estes links após fazer o deploy
 
 ### Frontend (Aplicação)
-**URL:** [Preencher após deploy]
+**URL:** https://lp-recuperacao-frontend-a4037idn5-filipes-projects-3f0cdcde.vercel.app/
 
 ### Backend (API)
-**URL:** [Preencher após deploy]
+**URL:** https://lp-js-hs-compound.onrender.com/
 
 ### Repositório GitHub
-**URL:** [Preencher após publicar]
+**URL:** https://github.com/filipegms5/lp-js-hs-compound
 
 **Tag/Release:** `v1.0-RECUP-LP-2025`
 
@@ -335,14 +334,13 @@ lp-recuperacao-js-hs-compound/
 - [x] Formatação em BRL (pt-BR)
 - [x] Tratamento de erros
 - [x] Dockerfile criado
-- [ ] Backend deployado em produção
-- [ ] Frontend deployado em produção
-- [ ] README.md completo
-- [ ] DEPLOY.md com passo a passo
-- [ ] RECUP_LP_2025.md preenchido
-- [ ] Tag v1.0-RECUP-LP-2025 criada
-- [ ] Repositório público no GitHub
-- [ ] Links testados e funcionando
+- [x] Backend deployado em produção
+- [x] Frontend deployado em produção
+- [x] README.md completo
+- [x] RECUP_LP_2025.md preenchido
+- [x] Tag v1.0-RECUP-LP-2025 criada
+- [x] Repositório público no GitHub
+- [x] Links testados e funcionando
 
 ## Informações Acadêmicas
 
