@@ -2,7 +2,7 @@
 // IMPORTANTE: Altere esta URL para a URL do seu backend deployado
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:8080'
-    : 'https://SEU-BACKEND.onrender.com'; // Altere para a URL do seu backend
+    : 'https://lp-js-hs-compound.onrender.com/';
 
 // Elementos do DOM
 const form = document.getElementById('compoundForm');
