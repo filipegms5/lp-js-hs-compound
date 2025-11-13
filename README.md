@@ -32,17 +32,6 @@ A aplicação calcula o montante final de um investimento com base na fórmula d
 
 ## Arquitetura
 
-```
-         HTTP/JSON          
-                     POST /api/compound                       
-   Frontend       >     Backend      
-   (JavaScript)                                  (Haskell)    
-                  <                  
-    Response JSON           
-     Vercel/                                        Render/
-     Netlify                                        Railway
-```
-
 ### Fluxo de Dados
 
 1. Usuário preenche o formulário no frontend
