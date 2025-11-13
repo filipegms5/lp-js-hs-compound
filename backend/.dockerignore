@@ -1,0 +1,8 @@
+.stack-work
+*.cabal
+dist
+dist-newstyle
+.git
+.gitignore
+README.md
+*.md

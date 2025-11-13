@@ -1,0 +1,29 @@
+# Haskell
+.stack-work/
+*.cabal
+dist/
+dist-newstyle/
+*.o
+*.hi
+
+# Node
+node_modules/
+npm-debug.log
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.exe
+*.dll
+*.so
+*.dylib

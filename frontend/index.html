@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Juros Compostos</h1>
+            <p class="subtitle">Frontend em JavaScript + Backend em Haskell</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Dados do Investimento</h2>
+
+                <form id="compoundForm">
+                    <div class="form-group">
+                        <label for="principal">
+                            Valor Principal (R$)
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="number"
+                            id="principal"
+                            name="principal"
+                            step="0.01"
+                            min="0.01"
+                            required
+                            placeholder="Ex: 1000.00"
+                        >
+                        <small>Valor inicial do investimento</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rate">
+                            Taxa de Juros Anual (%)
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="number"
+                            id="rate"
+                            name="rate"
+                            step="0.01"
+                            min="0"
+                            required
+                            placeholder="Ex: 12"
+                        >
+                        <small>Taxa anual em porcentagem (ex: 12 para 12%)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timesPerYear">
+                            Frequência de Composição
+                            <span class="required">*</span>
+                        </label>
+                        <select id="timesPerYear" name="timesPerYear" required>
+                            <option value="1">Anual (1x)</option>
+                            <option value="2">Semestral (2x)</option>
+                            <option value="4">Trimestral (4x)</option>
+                            <option value="12" selected>Mensal (12x)</option>
+                            <option value="365">Diária (365x)</option>
+                        </select>
+                        <small>Número de vezes que os juros são compostos por ano</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="years">
+                            Período (anos)
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="number"
+                            id="years"
+                            name="years"
+                            step="0.1"
+                            min="0.1"
+                            required
+                            placeholder="Ex: 5"
+                        >
+                        <small>Tempo do investimento em anos</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="calculateBtn">
+                        Calcular Juros Compostos
+                    </button>
+                </form>
+            </div>
+
+            <div id="resultSection" class="card result-card hidden">
+                <h2>Resultado</h2>
+
+                <div class="result-grid">
+                    <div class="result-item highlight">
+                        <span class="result-label">Montante Final</span>
+                        <span class="result-value" id="finalAmount">R$ 0,00</span>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-label">Juros Ganhos</span>
+                        <span class="result-value" id="interestEarned">R$ 0,00</span>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-label">Valor Investido</span>
+                        <span class="result-value" id="principalValue">R$ 0,00</span>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-label">Rendimento</span>
+                        <span class="result-value" id="returnPercentage">0%</span>
+                    </div>
+                </div>
+
+                <div class="formula-section">
+                    <h3>Fórmula Aplicada</h3>
+                    <p class="formula">A = P × (1 + r/n)<sup>n×t</sup></p>
+                    <div id="formulaDetails"></div>
+                </div>
+            </div>
+
+            <div id="errorSection" class="card error-card hidden">
+                <h3>Erro</h3>
+                <p id="errorMessage"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Atividade de Recuperação - Linguagem de Programação 2025</p>
+            <p><small>Frontend: JavaScript | Backend: Haskell</small></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
